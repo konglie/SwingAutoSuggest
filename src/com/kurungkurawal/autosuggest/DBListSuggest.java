@@ -15,7 +15,8 @@ import java.util.Map;
 public class DBListSuggest extends AutoSuggest implements AutoSuggestListener {
 
     private DB databaseConnection;
-    public DBListSuggest(DB database){
+
+    public DBListSuggest(DB database) {
         super();
 
         databaseConnection = database;
@@ -33,7 +34,7 @@ public class DBListSuggest extends AutoSuggest implements AutoSuggestListener {
         try {
             // class dbList adalah Map (java.util.Map)
             items = databaseConnection.getList(sql);
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return;
         }
@@ -42,7 +43,7 @@ public class DBListSuggest extends AutoSuggest implements AutoSuggestListener {
 
         // iterasi setiap item dalam map
         // dan tampilkan sebagai item dari autosuggest
-        for(int index : items.keySet()){
+        for (int index : items.keySet()) {
             item = items.get(index);
 
             // tampilan data dapat diubah dengan mengubah VALUE dari SimpleKeyValue

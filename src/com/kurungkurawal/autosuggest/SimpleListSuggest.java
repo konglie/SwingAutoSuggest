@@ -9,7 +9,7 @@ import com.kurungkurawal.autosuggest.core.AutoSuggestListener;
 public class SimpleListSuggest extends AutoSuggest implements AutoSuggestListener {
     private String[] fruits;
 
-    public SimpleListSuggest(){
+    public SimpleListSuggest() {
         super();
         fruits = "Jeruk,Pisang,Mangga,Anggur,Pepaya,Apel,Jambu,Manggis,Duku,Durian".split(",");
 
@@ -22,10 +22,10 @@ public class SimpleListSuggest extends AutoSuggest implements AutoSuggestListene
     public void filter(AutoSuggest c, String s) {
         c.removeAllItems();
         String fruit;
-        for(int i = 0; i < fruits.length; i++){
+        for (int i = 0; i < fruits.length; i++) {
             fruit = fruits[i];
             // kita hanya memeriksa apakah kata yang diketik adalah awal kata dari buah
-            if(fruit.toString().trim().toLowerCase().startsWith(s.toLowerCase())){
+            if (fruit.toString().trim().toLowerCase().startsWith(s.toLowerCase())) {
                 c.addItem(fruit);
             }
         }

@@ -8,6 +8,7 @@ package com.kurungkurawal.autosuggest.core;
  * To change this template use File | Settings | File Templates.
  */
 public interface AutoSuggestListener {
-	public abstract void filter(AutoSuggest c, String s);
-	public abstract Object getSelectedObject(Object c);
+    public abstract void filter(AutoSuggest c, String s);
+
+    public abstract Object getSelectedObject(Object c);
 }

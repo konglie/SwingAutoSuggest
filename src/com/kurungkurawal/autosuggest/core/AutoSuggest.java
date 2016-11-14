@@ -58,11 +58,12 @@ public class AutoSuggest extends JComboBox {
                 if (kcode == KeyEvent.VK_ESCAPE || kcode == KeyEvent.VK_ENTER) {
                     if (kcode == KeyEvent.VK_ENTER) {
                         if (getItemCount() > 0) {
-                            try {if(neighbourFocus != null){
+                            try {
+                                if (neighbourFocus != null) {
                                     neighbourFocus.grabFocus();
                                     neighbourFocus.requestFocus();
                                 }
-                            } catch (Exception e){
+                            } catch (Exception e) {
                                 e.printStackTrace();
                             }
                         }
@@ -152,7 +153,7 @@ public class AutoSuggest extends JComboBox {
         });
     }
 
-    public void setNeighbourFocus(JComponent c){
+    public void setNeighbourFocus(JComponent c) {
         neighbourFocus = c;
     }
 }

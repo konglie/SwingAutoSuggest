@@ -1,6 +1,7 @@
 package com.kurungkurawal.autosuggest;
 
 import com.kurungkurawal.autosuggest.db.DB;
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.HashMap;
@@ -9,7 +10,7 @@ import java.util.HashMap;
  * Created by konglie on 3/19/16.
  */
 public class AutoSuggestDemo extends JFrame {
-    public AutoSuggestDemo(){
+    public AutoSuggestDemo() {
         setTitle("Swing Auto Suggest");
         setResizable(false);
         setPreferredSize(new Dimension(640, 480));
@@ -29,9 +30,10 @@ public class AutoSuggestDemo extends JFrame {
     }
 
     JPanel body;
-    private void buildGUI(){
+
+    private void buildGUI() {
         body = new JPanel(new GridBagLayout());
-        body.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
+        body.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.anchor = GridBagConstraints.NORTH;
@@ -59,16 +61,17 @@ public class AutoSuggestDemo extends JFrame {
         getContentPane().add(body, BorderLayout.CENTER);
     }
 
-    private JLabel createLabel(String s){
+    private JLabel createLabel(String s) {
         JLabel lbl = new JLabel(s);
 
         return lbl;
     }
 
     private DB database = null;
-    public DB getDatabase(){
+
+    public DB getDatabase() {
         // inisialisasi class DB (database)
-        if(database == null){
+        if (database == null) {
             HashMap<String, String> conf = new HashMap<String, String>();
 
             // nama database

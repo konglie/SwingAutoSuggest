@@ -5,12 +5,13 @@ package com.kurungkurawal.autosuggest.core;
  */
 public class SimpleKeyValue {
     public final String KEY, VALUE;
-    public SimpleKeyValue(String key, String value){
+
+    public SimpleKeyValue(String key, String value) {
         this.KEY = key;
         this.VALUE = value;
     }
 
-    public String toString(){
+    public String toString() {
         return VALUE;
     }
 }
